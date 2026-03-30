@@ -10,8 +10,9 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+}
 
-  model User {
+model User {
   id       Int    @id @default(autoincrement())
   name     String
   email    String @unique
@@ -37,5 +38,4 @@ model Order {
   userId      Int
   status      String
   totalAmount Float
-}
 }
